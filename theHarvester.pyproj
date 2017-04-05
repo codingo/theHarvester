@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{156f21b9-39ea-47c7-9dfb-950b53efb7ea}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>myparser.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="changelog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="discovery\asksearch.py" />
+    <Compile Include="discovery\baidusearch.py" />
+    <Compile Include="discovery\bingsearch.py" />
+    <Compile Include="discovery\dnssearch-threads.py" />
+    <Compile Include="discovery\dnssearch.py" />
+    <Compile Include="discovery\DNS\Base.py" />
+    <Compile Include="discovery\DNS\Class.py" />
+    <Compile Include="discovery\DNS\lazy.py" />
+    <Compile Include="discovery\DNS\Lib.py" />
+    <Compile Include="discovery\DNS\Opcode.py" />
+    <Compile Include="discovery\DNS\Status.py" />
+    <Compile Include="discovery\DNS\Type.py" />
+    <Compile Include="discovery\DNS\win32dns.py" />
+    <Compile Include="discovery\DNS\__init__.py" />
+    <Compile Include="discovery\dogpilesearch.py" />
+    <Compile Include="discovery\exaleadsearch.py" />
+    <Compile Include="discovery\googleCSE.py" />
+    <Compile Include="discovery\googleplussearch.py" />
+    <Compile Include="discovery\googlesearch.py" />
+    <Compile Include="discovery\googlesets.py" />
+    <Compile Include="discovery\IPy.py" />
+    <Compile Include="discovery\jigsaw.py" />
+    <Compile Include="discovery\linkedinsearch.py" />
+    <Compile Include="discovery\pgpsearch.py" />
+    <Compile Include="discovery\shodansearch.py" />
+    <Compile Include="discovery\shodan\api.py" />
+    <Compile Include="discovery\shodan\wps.py" />
+    <Compile Include="discovery\shodan\__init__.py" />
+    <Compile Include="discovery\twittersearch.py" />
+    <Compile Include="discovery\yahoosearch.py" />
+    <Compile Include="discovery\yandexsearch.py" />
+    <Compile Include="discovery\__init__.py" />
+    <Compile Include="lib\graphs.py" />
+    <Compile Include="lib\hostchecker.py" />
+    <Compile Include="lib\htmlExport.py" />
+    <Compile Include="lib\markup.py" />
+    <Compile Include="lib\__init__.py" />
+    <Compile Include="myparser.py" />
+    <Compile Include="tests\myparser_test.py" />
+    <Compile Include="theHarvester.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="discovery" />
+    <Folder Include="discovery\DNS" />
+    <Folder Include="discovery\shodan" />
+    <Folder Include="lib" />
+    <Folder Include="tests" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

@@ -54,6 +54,7 @@ def usage():
     print "       -l: Limit the number of results to work with(bing goes from 50 to 50 results,"
     print "            google 100 to 100, and pgp doesn't use this option)"
     print "       -h: use SHODAN database to query discovered hosts"
+    print "       -ve: Verbose e-mails. Output source results from Google/Bing with e-mail results"
     print "\nExamples:"
     print "        " + comm + " -d microsoft.com -l 500 -b google -h myresults.html"
     print "        " + comm + " -d microsoft.com -b pgp"
